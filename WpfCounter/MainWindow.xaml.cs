@@ -25,7 +25,7 @@ namespace WpfCounter
         {
             InitializeComponent();
 
-            DispatcherTimer timer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal,
+            DispatcherTimer timer = new DispatcherTimer(TimeSpan.FromSeconds(0.5), DispatcherPriority.Normal,
                 delegate
                 {
                     int newValue = 0;
@@ -50,6 +50,6 @@ namespace WpfCounter
         }
 
         public static readonly DependencyProperty CounterProperty =
-    DependencyProperty.Register("Counter", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
+    DependencyProperty.Register("Counter", typeof(int), typeof(MainWindow), new PropertyMetadata(12));
     }
 }
